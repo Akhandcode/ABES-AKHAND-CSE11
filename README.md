@@ -1,6 +1,6 @@
 ## Hi there 👋
-This is my first git-hub repository.
-Author:-Akhand Pratap Singh
+This is my first git repository.
+Author-Akhand Pratap Singh
 
 <!--
 **Akhandcode/Akhandcode** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
