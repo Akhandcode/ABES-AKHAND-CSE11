@@ -1,33 +1,39 @@
-#include <iostream>
-#include <vector>
+#include<iostream>
+#include<vector>
 using namespace std;
-
-int main() {
-    int n,i;
-    cout << "Enter the size of the array: ";
-    cin >> n;
-
-    cout << "Enter the elements of the array: ";
-    vector<int> arr(n+1);
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
+void traverseArray(vector<int> &X){
+    for(int i=0;i<X.size();i++){
+        cout<<X[i]<<" ";
     }
-
-    int num,x;
-    cout << "Enter the number: ";
-    cin >> num;
-    cout << "Enter the index: ";
-    cin >> x;
-
-    for(int j = n; j > x; j--) {
-        arr[j] = arr[j-1];
+    cout << endl;
+}
+int main()
+{
+    int n,x,pos;
+    cout<<"Enter the size of array: ";
+    cin >>n;
+    cout<<"Enter element of array: ";
+    vector<int> A;
+    for(int i=0;i<n;i++){
+       int t;
+       cin>>t;
+       A.push_back(t);
     }
-    arr[x] = num;
-    n=n+1;
+    cout<<"Enter the element to be insert in an array:";
+    cin>>x;
+    cout<<"Enter the position of element : ";
+    cin>>pos;
+    insertArray(A,pos,x);
+    cout <<"After insertion in an array: ";
     
-    for(int i = 0; i<=arr.size()-1;i++)
-    {
-        cout << arr[i] << " ";
-    }
+    traverseArray(A);
+
     return 0;
+}
+void insertArray(vector<int>&A, int pos, int x){
+    A.push_back(0);
+    for(int i=A.size()-1;i>=pos;i--){
+        A[i]=A[i-1];
+    }
+    A[pos-1]=x;
 }

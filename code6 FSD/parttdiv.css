@@ -1,0 +1,28 @@
+*{
+    padding: 0%;
+}
+.maintdiv{
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+
+
+}
+.divfirst
+{
+    text-align: center;
+    background-color: rgb(249, 231, 153);
+    width: 25rem;
+    height: 25rem;
+}
+.divsec
+{
+    border-radius: 25px;
+
+}
+#Image1
+{
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+}
