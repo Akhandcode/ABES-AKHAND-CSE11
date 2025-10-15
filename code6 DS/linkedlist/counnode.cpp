@@ -6,11 +6,11 @@ using namespace std;
 
 int countNode()
 {
-    Node *p = Start;
+    node *p = Start;
     int count=0;
     while (p != NULL) {
         count++;
-        p = p->Next;
+        p = p->next;
     }
     return count;
 }
@@ -19,11 +19,13 @@ int main() {
     Start = NULL;   // initially list empty
     int count=0;
     InsBeg('A');
-    InsBeg('B');
+    InsBeg('B');  
     InsBeg('C');
     InsEnd('A');
     InsEnd('B');
     InsEnd('C');
+    InsEnd('A');
+    InsEnd('B');
 
     Traverse();
 

@@ -1,59 +1,101 @@
-#include<iostream>
-#include<stdlib.h>
+#include <iostream>
+#include <stdlib.h>
 using namespace std;
 
-struct Node {
-    char info;
-    struct Node *Next;
+struct node {
+    char data;
+    struct node* next;
 };
 
-struct Node *Start;   
 
-Node *GetNode() {
-    Node *p;
-    p = (Node*)malloc(sizeof(struct Node));
+node* GetNode() {
+    node* p = (node*)malloc(sizeof(node));
     return p;
+};
+
+
+void FreeNode(node* p) {
+    free(p);
+}
+
+
+struct node* Start = NULL;
+
+
+void Traverse() {
+    node* p = Start;
+    
+    while (p != NULL) {
+        cout << p->data << " ";
+        p = p->next;
+    }
+    cout << endl;
 }
 
 
 void InsBeg(char x) {
-    Node *p = GetNode();
-    p->info = x;
-    p->Next = Start;
+    node* p = GetNode();
+    p->data = x;
+    p->next = Start;
     Start = p;
 }
 
-void InsEnd(char x) {
-    Node *p = GetNode();
-    p->info = x;
-    p->Next = NULL;
 
-    if (Start == NULL) {   
+void InsEnd(char x) {
+    node* p = GetNode();
+    p->data = x;
+    p->next = NULL;
+
+    if (Start == NULL) {
         Start = p;
         return;
     }
-    Node *q = Start;
-    while (q->Next != NULL) {
-        q = q->Next;
+    
+    node* q = Start;
+    while (q->next != NULL) {
+        q = q->next;
     }
-    q->Next = p;
+    q->next = p;
 }
 
-void Traverse() {
-    Node *p = Start;
-    while (p != NULL) {
-        cout << p->info << " ";
-        p = p->Next;
-    }
-    cout << endl;
+
+void insAfter(node* q, char x) {
+    node* p = GetNode();
+    p->data = x;
+    node* r = q->next;
+    q->next = p;
+    p->next = r; 
 }
-int countNode()
-{
-    Node *p = Start;
-    int count=0;
-    while (p != NULL) {
-        count++;
-        p = p->Next;
+
+
+char delBeg() {
+    node* p = Start;
+    Start = Start->next;
+    char x = p->data;
+    FreeNode(p);
+    return x;
+}
+
+
+char delEnd() {
+    node* p = Start;
+    node* q = NULL;
+    while (p->next != NULL) {
+        q = p;
+        p = p->next;
     }
-    return count;
+    q->next = NULL;
+    char x = p->data;
+    FreeNode(p);
+    return x;
+}
+
+
+char delAfter(node* Q) {
+    node* p = Q->next;
+    node* R = p->next;
+    Q->next = R;
+    char x = p->data;
+    FreeNode(p);
+    return x;
 }

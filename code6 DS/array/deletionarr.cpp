@@ -1,33 +1,41 @@
-#include <iostream>
-#include <vector>
+#include<iostream>
+#include<vector>
 using namespace std;
-
-int main() {
-    int n,i;
-    cout << "Enter the size of the array: ";
-    cin >> n;
-
-    cout << "Enter the elements of the array: ";
-    vector<int> arr(n-1);
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
+void traverseArray(vector<int> &X){
+    for(int i=0;i<X.size();i++){
+        cout<<X[i]<<" ";
     }
-
-    int num,x;
-    cout << "Enter the number: ";
-    cin >> num;
-    cout << "Enter the index: ";
-    cin >> x;
-
-    for(int j = n; j > x; j--) {
-        arr[j] = arr[j-1];
+    cout << endl;
+}
+void deleteArray(vector<int>&A, int pos){
+    int x=A[pos];
+    for(int i=pos-1;i<A.size()-1;i++){
+        A[i]=A[i+1];
     }
-    arr[x] = num;
-    n=n+1;
+    A.pop_back();
     
-    for(int i = 0; i<=arr.size()-1;i++)
-    {
-        cout << arr[i] << " ";
+}
+int main()
+{
+    int n,x,pos;
+    cout<<"Enter the size of array: ";
+    cin >>n;
+    cout<<"Enter element of array: ";
+    vector<int> A;
+    for(int i=0;i<n;i++){
+       int t;
+       cin>>t;
+       A.push_back(t);
     }
+    cout<<"Enter the position where the element is deleted :";
+    cin>>pos;
+    if(pos<1 || pos>A.size()){
+        cout<<"Invalid position:" <<endl;
+        return 0;
+    }
+    deleteArray(A,pos);
+    cout<<"After deletion of an array: ";
+    traverseArray(A);
     return 0;
+
 }

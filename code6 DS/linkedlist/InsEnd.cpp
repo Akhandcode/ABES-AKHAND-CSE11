@@ -30,7 +30,7 @@ void InsEnd(char x) {
 
     if (Start == NULL) {   
         Start = p;
-        return;
+        return p;
     }
     Node *q = Start;
     while (q->Next != NULL) {

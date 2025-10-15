@@ -15,7 +15,7 @@ Node *GetNode(){
 void InsBeg(char x){
     Node *p=GetNode();
     p->info=x;
-    p->Next=Start;
+    p->Next=Start; 
     Start=p;
 }
 void Traverse() {   

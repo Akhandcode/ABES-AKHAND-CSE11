@@ -7,6 +7,14 @@ void traverseArray(vector<int> &X){
     }
     cout << endl;
 }
+
+void insertArray(vector<int>&A, int pos, int x){
+    A.push_back(0);
+    for(int i=A.size()-1;i>=pos;i--){
+        A[i]=A[i-1];
+    }
+    A[pos-1]=x;
+}
 int main()
 {
     int n,x,pos;
@@ -29,11 +37,4 @@ int main()
     traverseArray(A);
 
     return 0;
-}
-void insertArray(vector<int>&A, int pos, int x){
-    A.push_back(0);
-    for(int i=A.size()-1;i>=pos;i--){
-        A[i]=A[i-1];
-    }
-    A[pos-1]=x;
 }

@@ -14,7 +14,7 @@ void traverseArray(vector<int>&X)
 void mergeArray(vector<int>& A,vector<int>& B,int m,int n,vector<int>& C)
 {
 int i=0 , j=0;
-while(i<m && j<n)
+while(i<m && j<n) 
 {
     if( A[i]>B[j])
     {
@@ -50,7 +50,7 @@ int main() {
     cin>>A[i];
     }
     cout<<"Enter the size of the n";
-    cin>>n;
+    cin>>n; 
     vector<int> B(n);
     for(int j=0 ;j<n ; j++)
     {
