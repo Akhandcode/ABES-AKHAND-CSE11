@@ -11,28 +11,28 @@ struct Queue
     int FRONT;
 };
 
-void Initialise(Queue *CQ)
+void Initialise(Queue *Q)
 {
-    CQ->REAR=MAXQUEUE;
-    CQ->FRONT=MAXQUEUE;
+    Q->REAR=MAXQUEUE;
+    Q->FRONT=MAXQUEUE;
 }
-int enqueue(Queue *CQ,int x)
+int enqueue(Queue *Q,int x)
 {
-    if((CQ->REAR+1)%MAXQUEUE==CQ->FRONT)
+    if((Q->REAR+1)%MAXQUEUE==Q->FRONT)
     {
      cout<<"Overflow Queue";
      exit(1);
     }
     else
     {
-      CQ->REAR=CQ->REAR+1;
-      CQ->item[CQ->REAR]=x;
+      Q->REAR=Q->REAR+1;
+      Q->item[Q->REAR]=x;
     }
 }
 
-bool isEmpty(Queue *CQ)
+bool isEmpty(Queue *Q)
 {
-    if((CQ->REAR-CQ->FRONT+1)==0)
+    if((Q->REAR-Q->FRONT+1)==0)
     {
         return true;
     }

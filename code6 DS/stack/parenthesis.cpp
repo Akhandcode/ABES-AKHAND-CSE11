@@ -1,8 +1,7 @@
 #include<iostream>
 #define STACKSIZE 10
 #include "CharStackHeader.h"
-using namespace std;
-
+using namespace std;    
 
 void balanceParenthesis(char exp[]){
     Initialize();

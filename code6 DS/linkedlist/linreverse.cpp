@@ -6,7 +6,7 @@ using namespace std;
 void Reverse() {
     node* P = NULL; 
     node* C = Start; 
-    node* N = NULL; 
+    node* N = NULL;    
 
     if (Start == NULL) { 
         return;

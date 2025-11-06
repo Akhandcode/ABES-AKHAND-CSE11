@@ -8,7 +8,7 @@ struct stack {
 } S;
 
 void Initialize() {
-    S.top = -1;
+    S.top = -1; 
 }
 
 bool IsEmpty() {

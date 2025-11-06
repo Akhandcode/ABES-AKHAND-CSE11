@@ -22,11 +22,11 @@ void Traverse() {
     node* p = Start;
     while (p != NULL) {
         cout << p->data << " ";
-        p = p->next;
+        p = p->next; 
     }
     cout << endl;
 }
-
+ 
 void InsBeg(char x) {
     node* p = GetNode();
     p->data = x;

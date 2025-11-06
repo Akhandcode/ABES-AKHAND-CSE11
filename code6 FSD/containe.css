@@ -1,0 +1,32 @@
+.container
+{
+    display: flex;
+    justify-content: center;
+    gap:120px;
+    border: 2px solid black;
+}
+.box1
+{
+    width: 200px;
+    height: 200px;
+    background-color:aquamarine;
+}
+.box2
+{
+    width: 200px;
+    height: 200px;
+    background-color:rgb(226, 235, 60);
+}
+.box3
+{
+    width: 200px;
+    height: 200px;
+    background-color:rgb(46, 168, 195);
+}
+
+.box4
+{
+    width: 200px;
+    height: 200px;
+    background-color:rgb(180, 85, 85);
+}
