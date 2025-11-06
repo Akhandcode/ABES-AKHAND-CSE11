@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  /* flex-direction: row;*/
+  justify-content: center;
+  align-items:center;
+  border: 2px solid #444;
+  padding: 10px;
+  height: 650px;
+  width: 1500px;
+  gap: 50px; 
+}
+.box {
+  height: 250px;
+  width: 250px;
+  background: #4c86af;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items:end;
+  font-weight: bold;
+  text-align: center;
+}
