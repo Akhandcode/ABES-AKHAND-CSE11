@@ -1,0 +1,103 @@
+<!-- Akhand Pratap Singh (2400320100124)-->
+ <!-- OBJECTIVE: Create a Registration Page  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="Expirement5.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Logo</th>
+        <th colspan="5">Web Site Name</th>
+      </tr>
+      <tr>
+        <td><a href="experiment1.html">Home</a></td>
+        <td><a href="experiment2.html">Login</a></td>
+        <td><a href="Expirement5.html">Registration</a></td>
+        <td><a href="experiment3.html">Catalogue</a></td>
+        <td><a href="experiment4.html">Cart</a></td>
+      </tr>
+
+      <tr>
+        <td class="sidebar">
+          <a href="#">CSE</a> <br /><br />
+          <a href="#">ECE</a> <br /><br />
+          <a href="#">EEE</a> <br /><br />
+          <a href="#">CIVIL</a>
+        </td>
+        <td colspan="5" class="content">
+          <h2>Registration Form</h2>
+          <form onsubmit="return validateForm()">
+          <label>Name:
+            <input type="text" id="name" placeholder="Enter Name" />
+          </label>
+          <br /><br />
+          <label>Password:
+            <input type="password" id="password" placeholder="Enter Password" />
+          </label>
+          <br /><br />
+          <label>E-mail ID:
+            <input type="text" id="email" placeholder="Enter your E-mail ID" />
+          </label>
+          <br /><br />
+          <label>Phone Number:
+            <input type="text" id="phone" placeholder="Enter Phone Number" />
+          </label>
+          <br /><br />
+          <label>Gender:</label>
+          <input type="radio" name="sex" value="male" /> Male
+          <input type="radio" name="sex" value="female" /> Female
+          <br /><br />
+          <label>Date of Birth:</label>
+          <select name="day">
+            <option>Day</option>
+            <script>
+              for (let i = 1; i <= 31; i++) {
+                document.write(`<option value="${i}">${i}</option>`);
+              }
+            </script>
+          </select>
+          <select name="month">
+            <option>Month</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+          <select name="year">
+            <option>Year</option>
+            <script>
+              for (let y = 1980; y <= 2025; y++) {
+                document.write(`<option value="${y}">${y}</option>`);
+              }
+            </script>
+          </select><br /><br />
+          <label>Languages Known:</label><br />
+          <input type="checkbox" name="lang" value="english" /> English
+          <input type="checkbox" name="lang" value="telugu" /> Telugu
+          <input type="checkbox" name="lang" value="hindi" /> Hindi
+          <input type="checkbox" name="lang" value="tamil" /> Tamil
+          <br /><br />
+          <label>Address:</label><br />
+          <textarea rows="4" cols="40" placeholder="Enter your address"></textarea>
+          <br /><br />
+          <input type="submit" value="Submit" />
+        </form>
+        </td>
+      </tr>
+    </table>
+    <script src="expirement7.js"></script>
+  </body>
+</html>
