@@ -1,4 +1,5 @@
-
+// <!-- Akhand Pratap Singh (2400320100124)-->
+//  <!-- OBJECTIVE: Create a Registration Page  -->
 function validateForm() {
   const name = document.getElementById("name").value.trim();
   const password = document.getElementById("password").value.trim();

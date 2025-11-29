@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f4f7fc;
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.pricing-card {
+    background: white;
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+}
+
+.pricing-card.featured {
+    background: #4e73df;
+    color: white;
+    transform: scale(1.05);
+}
+
+.pricing-card h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.price {
+    font-size: 32px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.price span {
+    font-size: 16px;
+    color: gray;
+}
+
+.featured .price span {
+    color: #dce3ff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+button {
+    background: #4e73df;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pricing-card.featured button {
+    background: white;
+    color: #4e73df;
+}
+
+button:hover {
+    opacity: 0.9;
+}

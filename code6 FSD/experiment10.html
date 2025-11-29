@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feature Rich To-Do List</title>
+    <link rel="stylesheet" href="experiment10.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>To-Do List</h1>
+    <div class="input-box">
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <button id="addBtn" onclick="addTask()">+</button>
+    </div>
+
+    <div class="task-info">
+        <p>Total Tasks: <span id="taskCount">0</span></p>
+        <button class="clearAll" onclick="clearAll()">Clear All</button>
+    </div>
+
+    <ul id="taskList"></ul>
+</div>
+
+<script src="experiment10.js"></script>
+
+</body>
+</html>
