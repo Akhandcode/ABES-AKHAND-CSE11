@@ -23,21 +23,26 @@ int main(){
         }
         cout<<endl;
      }
-  vector<int >status(N,0);
+  vector<int >status(N,-1);
   queue<int>Q;
-  Q.push(0);
-  status[0]=1;
+  Q.push(3);
+  status[3]=0;
   cout<<" bfs order is :=>";
   while(Q.size()!=0){
     int x=Q.front();
     cout<<x<<" ,";
      Q.pop();
      for(int k=0;k<AdjList[x].size();k++){
-   int e=AdjList[x][k];
-   if(status[e]==0){
-    status[e]=1;
-    Q.push(e);
+      int e=AdjList[x][k];
+      if(status[e]==-1){
+       status[e]=status[x]+1;
+       Q.push(e);
    }
      }
+  }
+  for(int i=0;i<status.size();i++)
+  {
+    cout<<i<<" "<<status[i];
+    cout<<endl;
   }
 }

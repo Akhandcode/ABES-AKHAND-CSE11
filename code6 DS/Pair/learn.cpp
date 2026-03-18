@@ -24,3 +24,81 @@ while(!q.empty())
     cout<<p.first<<" "<<p.second<<" ";
 }
 }
+
+
+int n=grid.size();
+int n=grid[0].size();
+vector<vector<int>>status(n,vector<int>m,-1));
+queue<pair<int,int>>q;
+for(int i=0;i<n;i++)
+{
+    for(int j=0;j<m;j++)
+    {
+        if(grid[i][j]==1)
+        {
+            q.push((i,j));
+            status[i][j]=0;
+        }
+    }
+}
+while(!q.empty())
+{
+    pair<int,int>p;
+    p=q.front();
+    int i=p.first;
+    int j=p.second;
+    if(j+i<n)
+    {
+        if(grid[i][j+1]==1)
+        {
+            grid[i][j+1]=2;
+            status[i][j+1]=status[i][j]+1;
+            q.push(i,j-1);
+        }
+    }
+    if(j+i<n)
+    {
+        if(grid[i][j+1]==1)
+        {
+            grid[i][j+1]=2;
+            status[i][j+1]=status[i][j]+1;
+            q.push(i,j-1);
+        }
+    }
+    if(i-1>=0)
+    {
+        if(grid[i][j+1]==1)
+        {
+            grid[i][j+1]=2;
+            status[i][j+1]=status[i][j]+1;
+            q.push(i,j-1);
+        }
+    }
+    if(i+1<n)
+    {
+        if(grid[i][j+1]==1)
+        {
+            grid[i+1][j+1]=2;
+            status[i+1][j]=status[i][j]+1;
+            q.push(i,j-1);
+        }
+    }
+}
+for(int i=0;i<n;i++)
+{
+    for(int j=0;j<m;j++)
+    {
+        if(grid[i][j]==1)
+        {
+            return -1;
+        }
+        else if(grid[i][j]==2)
+        {
+            if(status[i][j]>maximun)
+            {
+                maximun=status[i][j];
+            }
+        }
+    }
+    return
+}
