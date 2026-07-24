@@ -2,7 +2,7 @@
 This is my first git repository.
 Author-Akhand Pratap Singh
 
-<!--
+
 **Akhandcode/Akhandcode** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
@@ -18,7 +18,7 @@ Here are some ideas to get you started:
 
 
 
-<!-- $git --version
+$git --version
 $git config -- global user.name
 $git config -- global user.email
 $git config -- list
@@ -35,10 +35,4 @@ $git status
 $git diff 
 $git commit -m "commit js file"
 $git push origin dev-name                 
- -->
-
--->
-
-
-
 
