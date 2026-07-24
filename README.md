@@ -15,4 +15,30 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
+
+
+
+<!-- $git --version
+$git config -- global user.name
+$git config -- global user.email
+$git config -- list
+$git clone url
+$cd FSD-CSE_11
+$git brach
+          *main$
+$git branch dev-name
+$git checkout dev-name
+$code
+$git status
+$git add .
+$git status
+$git diff 
+$git commit -m "commit js file"
+$git push origin dev-name                 
+ -->
+
 -->
+
+
+
+
