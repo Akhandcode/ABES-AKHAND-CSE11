@@ -18,9 +18,9 @@ Here are some ideas to get you started:
 
 
 
-$git --version
-$git config -- global user.name
-$git config -- global user.email
+$git --version ...
+$git config -- global user.name ...
+$git config -- global user.email ...
 $git config -- list
 $git clone url
 $cd FSD-CSE_11
